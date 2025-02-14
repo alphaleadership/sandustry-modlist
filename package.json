@@ -1,0 +1,20 @@
+{
+  "name": "modloader",
+  "version": "1.0.0",
+  "description": "\"# sandustry-modlist\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphaleadership/sandustry-modlist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alphaleadership/sandustry-modlist/issues"
+  },
+  "homepage": "https://github.com/alphaleadership/sandustry-modlist#readme"
+}
