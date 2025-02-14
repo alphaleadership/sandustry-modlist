@@ -1,1 +1,1 @@
-"# sandustry-modlist" 
+# sandustry-modlist
