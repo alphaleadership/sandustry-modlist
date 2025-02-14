@@ -190,8 +190,9 @@ dbManager.addddb('main').exportData('./mod.json');
 // Génération du fichier index.html avec EJS
 const ejs = require('ejs');
 const template = fs.readFileSync('index.ejs', 'utf8');
+console.log([dbManager.db['main'].getAll()])
 const data = {
-    mods: dbManager.db
+    mods: [dbManager.db['main'].getAll()]
 };
 const html = ejs.render(template, data);
 fs.writeFileSync('index.html', html);

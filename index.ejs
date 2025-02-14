@@ -22,8 +22,10 @@
         <section>
             <h2>Mods disponibles</h2>
             <ul>
+           
                 <% for (const mod in mods) { %>
-                    <li><a href="/<%= mod.name %>"><%= mod.name %></a></li>
+                    
+                    <li><a href="<%= mod.url%>"><%= mod.name %></a></li>
                 <% } %>
             </ul>
         </section>
