@@ -23,7 +23,7 @@ body:
       placeholder: e.g. https://www.zachleat.com/
     validations:
       required: true
-  
+  -type: input 
     id: download_link
     attributes:
       label: lien de téléchargement
