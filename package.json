@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"node ."
+    "build": "node ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/alphaleadership/sandustry-modlist/issues"
   },
-  "homepage": "https://github.com/alphaleadership/sandustry-modlist#readme"
+  "homepage": "https://github.com/alphaleadership/sandustry-modlist#readme",
+  "dependencies": {
+    "ejs": "^3.1.10"
+  }
 }

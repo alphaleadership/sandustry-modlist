@@ -169,3 +169,26 @@ class sgdb{
          return this.dblist
      }
  }
+
+// Création d'une instance de sgdb avec le répertoire 'mod'
+const dbManager = new sgdb('mod');
+
+// Importation de tous les fichiers JSON dans le répertoire 'mod'
+fs.readdirSync('mods').forEach(file => {
+    if (file.endsWith('.json')) {
+        dbManager.addddb("main").importData(`./mods/${file}`);
+       
+    }
+});
+
+// Exportation de la base de données
+dbManager.addddb('main').exportData('./mod.json');
+
+// Génération du fichier index.html avec EJS
+const ejs = require('ejs');
+const template = fs.readFileSync('index.ejs', 'utf8');
+const data = {
+    mods: dbManager.db
+};
+const html = ejs.render(template, data);
+fs.writeFileSync('index.html', html);
