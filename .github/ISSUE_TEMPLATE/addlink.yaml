@@ -10,33 +10,32 @@ body:
   - type: input
     id: url
     attributes:
-      label: name
-      description: l'url de la home page 
-      placeholder: e.g. https://www.zachleat.com/
+      label: URL du site
+      description: l'url de la page d'accueil 
+      placeholder: par exemple https://www.zachleat.com/
     validations:
       required: true
   - type: input
     id: name
     attributes:
-      label: name
+      label: Nom du mod
       description: le nom de votre mod 
-      placeholder: e.g. https://www.zachleat.com/
+      placeholder: par exemple Zach's Mod
     validations:
       required: true
-  -type: input 
+  - type: input
     id: download_link
     attributes:
-      label: lien de téléchargement
-      description:  The URL to download your mod. _[parser:url]_"
-      placeholder: e.g. https://example.com/download
+      label: Lien de téléchargement
+      description: L'URL pour télécharger votre mod. _[parser:url]_
+      placeholder: par exemple https://example.com/download
     validations:
       required: true
   - type: textarea
     id: authors
     attributes:
-      label: "Authors (GitHub usernames)"
-      description: "Optional: _Leave this empty if you are the only author._ If you are listing one or more other authors, make sure to include yourself in this list! _[parser:usernames]_"
-      placeholder: e.g. @zachleat, @pdehaan
+      label: Auteurs (noms d'utilisateur GitHub)
+      description: Facultatif : _Laissez ce champ vide si vous êtes le seul auteur._ Si vous énumérez un ou plusieurs autres auteurs, assurez-vous d'inclure vous-même dans cette liste ! _[parser:usernames]_
+      placeholder: par exemple @zachleat, @pdehaan
     validations:
       required: false
- 
