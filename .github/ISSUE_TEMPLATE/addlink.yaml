@@ -35,7 +35,7 @@ body:
     id: authors
     attributes:
       label: Auteurs (noms d'utilisateur GitHub)
-      description: Facultatif : _Laissez ce champ vide si vous êtes le seul auteur._ Si vous énumérez un ou plusieurs autres auteurs, assurez-vous d'inclure vous-même dans cette liste ! _[parser:usernames]_
+      description: "Facultatif : _Laissez ce champ vide si vous êtes le seul auteur._ Si vous énumérez un ou plusieurs autres auteurs, assurez-vous d'inclure vous-même dans cette liste ! _[parser:usernames]_"
       placeholder: par exemple @zachleat, @pdehaan
     validations:
       required: false
