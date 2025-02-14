@@ -1,0 +1,34 @@
+name: ajoutée un mod 
+description: Show off your Eleventy site on the Eleventy documentation
+title: "[mod]__votre nom de mod__"
+labels: mod
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only the site URL is required. All other fields are optional.
+  - type: input
+    id: url
+    attributes:
+      label: name
+      description: le nom de votre mod 
+      placeholder: e.g. https://www.zachleat.com/
+    validations:
+      required: true
+  
+    id: download_link
+    attributes:
+      label: lien de téléchargement
+      description:  The URL to download your mod. _[parser:url]_"
+      placeholder: e.g. https://example.com/download
+    validations:
+      required: true
+  - type: textarea
+    id: authors
+    attributes:
+      label: "Authors (GitHub usernames)"
+      description: "Optional: _Leave this empty if you are the only author._ If you are listing one or more other authors, make sure to include yourself in this list! _[parser:usernames]_"
+      placeholder: e.g. @zachleat, @pdehaan
+    validations:
+      required: false
+ 

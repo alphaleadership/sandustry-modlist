@@ -1,3 +1,5 @@
+const fs =require("fs")
+const path=require("path")
 class db {
     constructor(directory, maxSize = 1000) {
         this.directory = directory;
@@ -152,6 +154,7 @@ class sgdb{
      }
      addddb(name,n){
          this.db[name]=new db(`${this.dir}/${name}`,n)
+         return this.db[name]
      }
      removedb(name){
          delete this.db
