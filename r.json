@@ -1,0 +1,18 @@
+{
+  mods: [
+    {
+      name: 'test',
+      url: 'https://github.com/alphaleadership/sandustry-modlist/',
+      download_link: '',
+      opened_by: 'alphaleadership',
+      authors: undefined
+    },
+    {
+      name: 'test2',
+      url: 'https://vercel.com/guides/using-express-with-vercel',
+      download_link: 'https://www.mozilla.org/fr/firefox/?utm_medium=firefox-desktop&utm_source=bookmarks-toolbar&utm_campaign=new-users&utm_content=-global',
+      opened_by: 'alphaleadership',
+      authors: []
+    }
+  ]
+}

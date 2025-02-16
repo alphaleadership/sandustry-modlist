@@ -179,7 +179,7 @@ const dbManager = new sgdb('mod');
 // Importation de tous les fichiers JSON dans le répertoire 'mod'
 fs.readdirSync('mods').forEach(file => {
     if (file.endsWith('.json')) {
-        dbManager.addddb("main").importData(`./mods/${file}`);
+        dbManager.addddb("main").set(JSON.parse(fs.readFileSync(`mods/${file}`)).name, JSON.parse(fs.readFileSync(`mods/${file}`)));
        
     }
 });
@@ -190,9 +190,16 @@ dbManager.addddb('main').exportData('./mod.json');
 // Génération du fichier index.html avec EJS
 const ejs = require('ejs');
 const template = fs.readFileSync('index.ejs', 'utf8');
-console.log([dbManager.db['main'].getAll()])
+
 const data = {
-    mods: [dbManager.db['main'].getAll()]
+    mods: Object.values(dbManager.db['main'].getAll()).map(mod => ({
+        name: mod.name,
+        url: mod.url,
+        download_link: mod.download_link,
+        opened_by: mod.opened_by,
+        authors: mod.authors
+    }))
 };
+console.log(data)
 const html = ejs.render(template, data);
-fs.writeFileSync('index.html', html);
+fs.writeFileSync('index2.html', html);
